@@ -1,0 +1,29 @@
+img{
+    width: 70%;
+    position: relative;
+    top: 16px;
+}
+
+.tablero{
+   
+    justify-content: center;
+}
+
+table{
+    background-color: rgb(246, 246, 246);
+}
+
+td {
+    text-align: center;
+    height: 150px;
+    width: 150px;
+}
+
+#center-row{
+    border-top: 20px solid #454d55;
+    border-bottom: 20px solid #454d55;
+}
+
+.borde-right{
+    border-right: 20px solid #454d55;
+}

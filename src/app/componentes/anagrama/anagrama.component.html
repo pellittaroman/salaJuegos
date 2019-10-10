@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<h1 class="text-center text-primary" style="margin-bottom:5%">ANAGRAMA</h1>
+<h2 *ngIf="isWin" style="background-color: chartreuse;color:black;width: 100%;text-align: center">GANASTE, CRACK!!</h2>
+<h2 *ngIf="loser" style="background-color: darkred;color:black;width: 100%; text-align: center">PENSALO MEJOR!!</h2>
+<h2 *ngIf="loser2" style="background-color:red ;color:black ;width: 100%;text-align:center" >RESPIRA, PENSA E INTENTA DE NUEVO</h2>
+<div class="container" *ngIf="jugando">
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <label for="palabra" style="text-align: center;color:white;font-size: 45px;padding: 2%">{{palabra.toUpperCase()}}</label><br><br>
+          <input type="text"[(ngModel)]="palabraIngresada" placeholder="INGRESE PALABRA.." style="width:100%">
+        </div>
+      </div>
+    </div>
+    <div class="container" *ngIf="jugando">
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <button class="btn btn-success" style="width: 100%;margin-top: 10%" (click)="verificar()">verificar</button>
+        </div>
+      </div>
+    </div>        
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8"><button class="btn btn-info"style="width:100%;margin-top:20%" *ngIf="!jugando"  (click)="nuevoJuego()">NUEVO JUEGO</button></div>
+  </div>
+</div>

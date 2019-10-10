@@ -1,0 +1,58 @@
+<app-menu></app-menu>
+<h1 class="text-center text-info">PIEDRA, PAPEL O TIJERA</h1>
+<div class="jumbotron" style="background-color: black">
+<div class="container">
+    <div class="row">
+            <div class="col-lg-2"></div>
+        <div class="col-lg-4 text-center text-white" *ngIf="jugando">
+                <label>JUGADOR</label><br>
+            <img src='./assets/imagenes/interrogacion.jpg' alt="" style="width: 60px;height:60px" >
+        </div>
+        <div class="col-lg-4  text-white text-center" *ngIf="mostrar">
+                <label>JUGADOR</label><br>
+            <img src="{{mostrarJugador}}" alt="" style="width: 100px;height:100px">
+        </div>
+        
+        <div class="col-lg-4 text-center text-white" *ngIf="jugando">
+            <label for="">MAQUINA</label><br>
+            <img src='./assets/imagenes/interrogacion.jpg'  alt="" style="width: 60px;height:60px" >
+        </div>
+        <div class="col-lg-4  text-white text-center" *ngIf="mostrar">
+                <label for="">MAQUINA</label><br>
+                <img src="{{mostrarMaquina}}" alt="" style="width: 100px;height:100px">
+        </div>
+</div >
+</div>
+</div>
+<div class="container" *ngIf="jugando">
+        <div class="jumbotron" style="background-color: lightgray">
+          <div class="row" >
+            <div class="col-4 text-center text-white" >
+                <label style="color: black"  for="">PIEDRA</label><br>
+                <img (click)="verificarJugada(1)" src='./assets/imagenes/piedraa.jpg' class="media-object imagenDeMenu"
+                  alt="" style="width: 100px;height:100px">
+            </div>
+            <div class="col-4 text-white text-center">
+                    <label style="color: black" for="">PAPEL</label><br>
+                <img (click)="verificarJugada(2)" src="./assets/imagenes/papel.jpg" class="media-object imagenDeMenu"
+                  alt="" style="width: 100px;height:100px">
+            </div>
+            <div class="col-4 text-white text-center">
+                    <label style="color: black" for="">TIJERA</label><br>
+                <img (click)="verificarJugada(3)" src="./assets/imagenes/tijera.jpg"   alt="" style="width: 100px;height:100px">
+            </div>
+            </div>
+            </div>
+            </div>
+            <div style="background-color: limegreen;color:black;text-align: center" *ngIf="gano"><h1>GANASTE!!</h1></div>
+            <div style="background-color: red;color:black;text-align: center" *ngIf="perdio"><h1>PERDISTE!!</h1></div>
+            <div style="background-color: lightblue;color:black;text-align: center" *ngIf="empato"><h1>EMPATE!!</h1></div>
+            <div class="container" *ngIf=nuevo>
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-primary" style="width: 100%" (click)="nuevoJuego()">NUEVO JUEGO</button>
+                    </div>
+                </div>
+            </div>
+            

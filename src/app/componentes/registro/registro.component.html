@@ -1,0 +1,52 @@
+<div class="container" >
+  <div class="jumbotron" style="padding:15px;">
+    <form action="return true;" style="background-color: black;">
+      <div class="imgcontainer">
+        <img src="./assets/imagenes/registro.jpg" alt="Avatar" class="avatar"  >
+      </div>
+
+      <div class="container">
+      <div class="row">
+          <div class="col-lg-12" style="text-align: center; margin-top: 10px; color: blue">  
+        <label ><b>Nombre</b></label>
+          </div>
+        
+          <input type="text" placeholder="Nombre" style="margin-left: 10%;width: 80%;"  [(ngModel)]="nombre"  name="name" required>
+        <div class="col-lg-12" style="text-align: center; margin-top: 10px; color: blue">
+        <label><b>Sexo</b></label>
+        </div>
+      
+          <select name="sexo" id="sexo" style="width:80%;margin-left: 10%;height: 50px;" [(ngModel)]="sexo">
+            <option value="1" style="text-align: center;">Femenino</option>
+            <option value="2" selected>Masculino</option>
+          </select>        
+          <div class="col-lg-12" style="text-align: center; margin-top: 10px; color: blue">  
+        <label ><b>Email</b></label>
+          </div>
+        
+          <input type="text" placeholder="Email"  [(ngModel)]="usuario" style="width:80%;margin-left: 10%;" name="uname" required>
+        <div class="col-lg-12" style="text-align: center; margin-top: 10px; color: blue">
+        <label><b>Clave</b></label>
+        </div>
+        <input type="password" placeholder="Clave" style="width:80%;margin-left: 10%;" [(ngModel)]="clave" name="psw" required>
+            
+        
+       
+        <div  class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped active"  role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"  >
+              
+            </div>
+        </div>
+      </div>
+        <input type="checkbox" checked="checked" ><span class="text-white">Acepto las condiciones</span> 
+      </div>
+
+      <button type="button" class="btn btn-primary text-white btn-lg" (click)=Registrar() >Registrarse</button>
+        <button type="button" class="btn btn-danger text-white btn-lg"routerLink="/">Cancelar</button>
+        
+        
+      
+    
+    </form>
+  </div>
+</div>
