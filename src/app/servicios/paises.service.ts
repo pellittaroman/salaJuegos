@@ -7,7 +7,7 @@ export class PaisesService {
 
 
   public listar():Promise<Array<any>> {
-       return   this.miHttp.httpGetP("https://restcountries.eu/rest/v2/all")
+       return   this.miHttp.httpGetP("https://restcountries.com/v3.1/all")
           .then( data => {
            
             return data;
